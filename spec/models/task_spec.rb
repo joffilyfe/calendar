@@ -13,6 +13,10 @@ RSpec.describe Task, type: :model do
       it 'with all required fields empty' do
         expect(build(:task, :all_empty_fields)).to_not be_valid
       end
+
+      it 'with a short title' do
+        expect(build(:task, :short_title)).to_not be_valid
+      end
     end
 
   end

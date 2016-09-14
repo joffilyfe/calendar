@@ -14,5 +14,9 @@ FactoryGirl.define do
       description nil
     end
 
+    trait :short_title do
+      title "Not"
+    end
+
   end
 end
