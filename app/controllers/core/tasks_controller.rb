@@ -1,6 +1,9 @@
 class Core::TasksController < ApplicationController
 
   before_action :set_task, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :creat, :new, :destroy]
+  before_action :user_is_admin?, only: [:edit, :update, :creat, :new, :destroy]
+
 
   def index
     @tasks = Task.all
