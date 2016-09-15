@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+.rails-bootstrap-forms-datetime-select select {
+  display: inline;
+  width: auto;
+}
+
+.form-group.action .btn {
+  margin-right: 15px;
+}

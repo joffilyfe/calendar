@@ -1,0 +1,15 @@
+- if @task.errors.any?
+  #error_explanation
+    h2 = pluralize(@task.errors.count, "error")
+     | prohibited this task from being saved:
+    ul
+      - @task.errors.full_messages.each do |message|
+        li = message
+
+= bootstrap_form_for([:core, @task]) do |f|
+  = f.text_field :title
+  = f.text_area :description
+  = f.datetime_select :date
+  = f.form_group :class => 'action' do
+    = link_to 'Back', core_tasks_path, class: 'btn btn-default'
+    = f.submit :class => 'btn btn-primary'
