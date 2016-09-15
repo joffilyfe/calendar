@@ -4,6 +4,7 @@ RSpec.describe Core::TasksController, type: :controller do
 
   before(:each) do
     @admin = FactoryGirl.create(:user, :admin)
+    @user = FactoryGirl.create(:user)
     sign_in(@admin)
   end
 
@@ -23,6 +24,14 @@ RSpec.describe Core::TasksController, type: :controller do
     it 'Index should have zero task list' do
       get :index
       expect(assigns(:tasks).length).to eq(0)
+    end
+
+    context 'logged as a simple User' do
+      it 'restricted view should redirect to root_path' do
+        sign_in(@user)
+        get :new
+        expect(response).to redirect_to root_path
+      end
     end
   end
 
