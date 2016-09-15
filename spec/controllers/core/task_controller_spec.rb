@@ -2,6 +2,11 @@ require 'rails_helper'
 
 RSpec.describe Core::TasksController, type: :controller do
 
+  before(:each) do
+    @admin = FactoryGirl.create(:user, :admin)
+    sign_in(@admin)
+  end
+
   describe 'Accessing views' do
     it 'GET index' do
       get :index
