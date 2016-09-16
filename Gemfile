@@ -20,6 +20,7 @@ group :development, :test do
   gem 'simplecov', :require => false
   gem 'faker'
   gem 'sqlite3'
+  gem 'capybara'
 end
 
 group :development do
