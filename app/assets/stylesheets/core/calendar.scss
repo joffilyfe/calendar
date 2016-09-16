@@ -1,0 +1,46 @@
+#calendar {
+  .fc-event {
+      position: relative;
+      display: block;
+      font-size: .85em;
+      line-height: 1.3;
+      border-radius: 0;
+      border: 0;
+      font-weight: 400;
+  }
+
+  .fc-event, .fc-event-dot {
+    background-color: #D1EDE0 ;
+  }
+
+  .fc-event, .fc-event:hover, .ui-widget .fc-event {
+    color: #2b6d4e;
+    text-decoration: none;
+  }
+
+  .fc-day-grid-event {
+    margin: 1px 2px 0;
+    padding: 5px;
+  }
+  .fc-today {
+    background: #fff;
+  }
+
+  td.fc-state-highlight {
+    border-color: #ddd;
+  }
+
+  .fc-day-top.fc-today.fc-state-highlight a {
+    background: #F44336;
+    color: #fff;
+    min-width: 15px;
+    text-align: center;
+    border-radius: 100%;
+    font-weight: bold;
+    padding: 3px 5px;
+  }
+
+  a.fc-day-number {
+      color: #444;
+  }
+}
