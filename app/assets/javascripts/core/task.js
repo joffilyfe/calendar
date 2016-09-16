@@ -12,12 +12,18 @@ app.atartApp = function() {
             click: function() {
                 window.location.href = '/core/tasks/new'
             }
+        },
+        taskListButton: {
+          text: 'Task List',
+          click: function() {
+            window.location.href = '/core/tasks'
+          }
         }
       },
       header: {
         left: 'prev,next today',
         center: 'title',
-        right: 'newTaskButton'
+        right: 'newTaskButton,taskListButton'
       },
       defaultDate: '2016-09-12',
       navLinks: true,
