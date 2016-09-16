@@ -22,3 +22,25 @@
 .form-group.action .btn {
   margin-right: 15px;
 }
+
+
+.btn.btn-lg {
+  margin-bottom: 15px;
+}
+
+
+.navbar-materialize {
+  background-color: #fff;
+}
+
+.navbar.navbar-materialize {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  margin-bottom: 50px;
+}
+
+.navbar-materialize .navbar-brand {
+  color: #777;
+  font-size: 30px;
+}
