@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   def user_is_admin?
     unless user_signed_in? and current_user.admin
+      flash[:notice] = "You don't have permission to access this resource."
       redirect_to root_path
     end
   end
