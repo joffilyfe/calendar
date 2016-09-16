@@ -1,28 +1,39 @@
-== README
+# Calendar
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is your next calendar, forget google agenda or similar.
+This is a part of test about how create tests and APIs.
 
-Things you may want to cover:
+## How to Install
+Before install this project, please, look if you have installed Ruby 2.3+ and bundle gem mananger.
 
-* Ruby version
+Firstly you need to clone this project
+```bash
+git clone https://github.com/joffilyfe/calendar
+```
 
-* System dependencies
+After cloning, enter in folder and install all dependencies:
+```bash
+cd calendar
+bundle install
+```
 
-* Configuration
+In development mode we are using sqlite3 but you can change it if you prefer. Now you need to run our migrations.
+```bash
+rake db:migrate
+```
 
-* Database creation
+Now you can run this project in development mode, just run rails:
+```bash
+rails server
+```
 
-* Database initialization
+Access http://localhost:3000
 
-* How to run the test suite
+###Note
+If you deploy this project in production environment you will need setup some variables:
+```bash
+export DEVISE_KEY=somethingsecret
+export DEVISE_KEY=SECRET_KEY_BASE
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+that it, thank you!
