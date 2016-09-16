@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount API => '/'
-  root 'core/tasks#index'
+  root 'core/site#index'
 
   devise_for :users
   namespace :core do
