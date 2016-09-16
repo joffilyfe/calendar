@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Create sample taks
+3.times do |i|
+  Task.create(title: "Sample task", date: Time.now + i.day)
+end
+
+# Create users
+User.create(email: 'admin@admin.com', password: 'password', password_confirmation: 'password', admin: true);
+User.create(email: 'user@user.com', password: 'password', password_confirmation: 'password');
